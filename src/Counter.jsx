@@ -25,6 +25,7 @@ class Counter extends Nullstack {
   }
 
   async initiate() {
+    console.log('initiate', this)
     this.count = await this.getCount()
   }
 
