@@ -4,7 +4,6 @@ import fs from 'fs'
 import path from 'path'
 
 class Counter extends Nullstack {
-
   count = 0
 
   static async getDatabaseFile({ environment }) {
@@ -16,6 +15,7 @@ class Counter extends Nullstack {
     const databaseFile = await this.getDatabaseFile()
     if (fs.existsSync(databaseFile)) {
       const json = fs.readFileSync(databaseFile, 'utf-8')
+      console.log('json', json)
       return JSON.parse(json).count
     }
     return 0
@@ -26,9 +26,10 @@ class Counter extends Nullstack {
   }
 
   static async setCount({ count }) {
-    const databaseFile = await this.getDatabaseFile()
-    const json = JSON.stringify({ count })
-    return fs.writeFileSync(databaseFile, json)
+    // const databaseFile = await this.getDatabaseFile()
+    // const json = JSON.stringify({ count })
+    // return fs.writeFileSync(databaseFile, json)
+    console.log('count', count)
   }
 
   increment() {
@@ -43,7 +44,6 @@ class Counter extends Nullstack {
       </button>
     )
   }
-
 }
 
 export default Counter
