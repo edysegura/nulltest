@@ -2,6 +2,7 @@ import Nullstack from 'nullstack'
 
 import '../tailwind.css'
 import Home from './Home'
+import Counter from './Counter'
 
 class Application extends Nullstack {
   prepare({ page }) {
@@ -22,6 +23,7 @@ class Application extends Nullstack {
       <body class="bg-gray-900 text-white font-roboto">
         <Head />
         <Home route="/" greeting="Welcome to Nullstack!" persistent />
+        <Counter route="/counter" persistent />
       </body>
     )
   }
