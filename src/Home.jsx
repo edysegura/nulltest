@@ -4,7 +4,6 @@ import Logo from 'nullstack/logo'
 import Counter from './Counter'
 
 class Home extends Nullstack {
-
   prepare({ project, page, greeting }) {
     page.title = `${project.name} - ${greeting}`
     page.description = `${project.name} was made with Nullstack`
@@ -54,17 +53,18 @@ class Home extends Nullstack {
               <ActionLink href="https://nullstack.app/context">⚡ Define your context</ActionLink>
             </li>
             <li>
-              <ActionLink href="https://github.com/nullstack/nullstack/stargazers">⭐ Leave a star on github</ActionLink>
+              <ActionLink href="https://github.com/nullstack/nullstack/stargazers">
+                ⭐ Leave a star on github
+              </ActionLink>
             </li>
             <li>
               <ActionLink href="https://youtube.com/nullstack">🎬 Subscribe to our Youtube Channel</ActionLink>
             </li>
           </ul>
           <span class="block mt-2">
-            Hint: we have a
-            <Link href="vscode:extension/ChristianMortaro.vscode-nullstack">VS Code Extension</Link>
+            Hint: we have a<Link href="vscode:extension/ChristianMortaro.vscode-nullstack">VS Code Extension</Link>
           </span>
-          <Counter />
+          <Counter persistent />
         </article>
         <aside class="w-full">
           <Link href="https://nullstack.app/waifu">
@@ -74,7 +74,6 @@ class Home extends Nullstack {
       </section>
     )
   }
-
 }
 
 export default Home

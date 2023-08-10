@@ -4,7 +4,6 @@ import '../tailwind.css'
 import Home from './Home'
 
 class Application extends Nullstack {
-
   prepare({ page }) {
     page.locale = 'en-US'
   }
@@ -22,11 +21,10 @@ class Application extends Nullstack {
     return (
       <body class="bg-gray-900 text-white font-roboto">
         <Head />
-        <Home route="/" greeting="Welcome to Nullstack!" />
+        <Home route="/" greeting="Welcome to Nullstack!" persistent />
       </body>
     )
   }
-
 }
 
 export default Application
