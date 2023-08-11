@@ -14,7 +14,7 @@ class Counter extends Nullstack {
   static async getCount() {
     const response = await fetch('https://ipapi.co/json')
     const ipAPIjson = await response.json()
-    console.log('ipAPIjson', ipAPIjson)
+    console.log('ipAPIjson', ipAPIjson, this)
     const databaseFile = await this.getDatabaseFile()
     if (fs.existsSync(databaseFile)) {
       const json = fs.readFileSync(databaseFile, 'utf-8')
@@ -25,7 +25,7 @@ class Counter extends Nullstack {
   }
 
   async initiate() {
-    console.log('initiate', this)
+    console.log('initiate on example', this)
     this.count = await this.getCount()
   }
 
