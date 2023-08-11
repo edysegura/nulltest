@@ -29,6 +29,10 @@ class Counter extends Nullstack {
     this.count = await this.getCount()
   }
 
+  async hydrate() {
+    console.log('hydrate on example', this)
+  }
+
   static async setCount({ count }) {
     // const databaseFile = await this.getDatabaseFile()
     // const json = JSON.stringify({ count })
