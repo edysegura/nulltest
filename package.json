@@ -12,6 +12,7 @@
   "scripts": {
     "start": "npx nullstack start",
     "build": "npx nullstack build",
-    "vercel-build": "npm run build && npx nullstack-adapt-vercel"
+    "vercel-build": "npm run build && npx nullstack-adapt-vercel",
+    "cleanup": "rm -fr .development .production node_modules package-lock.json"
   }
 }
