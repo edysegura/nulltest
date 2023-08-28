@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "devDependencies": {
-    "nullstack": "0.20.0",
+    "nullstack": "github:GuiDevloper/nullstack#update-webpack",
     "tailwindcss": "^3.0.0",
     "postcss-loader": "^7.0.1"
   },
